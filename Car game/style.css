@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: black;
+    background-image: url('car_game.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    overflow: hidden;
+}
+img{
+    pointer-events: none;
+}
+/* start container */
+
+#startContainer{
+    background-color: orange;
+    color: #ffffff;
+    width: 300px;
+    margin: auto;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 300;
+    font-size: 18px;
+    font-family: cursive;
+}
+#startButton{
+    padding: 11px;
+    font-size: 20px;
+    font-family: cursive;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+/* game container */
+#container{
+    position: relative;
+    height: 100dvh;
+    width: 576px;
+    margin: auto;
+    box-shadow: 0px 0px 20px 4px black;
+    background-color: black;
+    background-image: 
+        repeating-linear-gradient(
+            to bottom,
+            white 0px,
+            white 20px,
+            transparent 20px,
+            transparent 40px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            white 0px,
+            white 70px,
+            transparent 70px,
+            transparent 110px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            white 0px,
+            white 70px,
+            transparent 70px,
+            transparent 110px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            white 0px,
+            white 70px,
+            transparent 70px,
+            transparent 110px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            white 0px,
+            white 70px,
+            transparent 70px,
+            transparent 110px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            white 0px,
+            white 20px,
+            transparent 20px,
+            transparent 40px
+        );
+
+    background-size: 2px 40px,2px 110px,2px 110px,2px 110px,2px 110px, 2px 40px;
+    background-position: left top, 20% top,40% top,60% top,80% top, right top;
+    background-repeat: repeat-y;
+
+    animation: highway 1.8s linear infinite;
+}
+
+@keyframes highway {
+    from{
+        background-position: left 0px,  20% 0px,  40% 0px, 60% 0px, 80% 0px, right 0px;
+    }
+    to{
+        background-position: left 440px, 20% 440px, 40% 440px, 60% 440px, 80% 440px, right 440px;
+    }
+}
+
+/* userCar styling */
+
+#userCarContainer{
+    position: absolute;
+    bottom: 0px;
+    right: 45%;
+}
+#userCar{
+    width: 40px;
+}
+
+/* obstacleImage */
+
+.obstacleContainer{
+    position: absolute;
+    top: 0px;
+    transform: translateY(-75px);
+    line-height: 0%;
+}
+.obstcaleImage{
+    width: 40px;
+}
+
+/* score and highest score Container */
+#scoreContainer{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 13px;
+    font-family: cursive;
+    z-index: 1000;
+}
+
+/* button container */
+
+#buttonContainer{
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    display: grid;
+    grid-template-columns: 60px 60px;
+    text-align: justify;
+    transform: rotate(45deg);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.carButtons{
+    height: 60px;
+    background-color: #ffffff;
+    opacity: 0.5;
+}
+.carButtons:hover{
+    opacity: 1;
+}
+
+/* responsive css */
+
+@media (max-width:1000px) {
+    #startContainer{
+        width: 200px;
+        font-size: 16px;
+        padding: 12px;
+    }
+    #startButton{
+        padding: 11px;
+        font-size: 15px;
+        border-radius: 15px;
+        margin-top: 8px;
+    }
+    #container{
+        width: 400px;
+    }
+    #userCarContainer{
+        right: 45%;
+    }
+    #userCar{
+        width: 30px;
+    }
+    .obstcaleImage{
+        width: 30px;
+    }
+    #scoreContainer{
+        font-size: 12px;
+        font-weight: 700;
+        padding: 11px;
+    }
+    #buttonContainer{
+        bottom: 20px;
+        right: 20px;
+    }
+}
+@media (max-width:680px) {
+    html{
+        background-image: none;
+    }
+    #container{
+        width: 100%;
+        margin: 0;
+    }
+    #startContainer{
+        font-size: 18px;
+    }
+    #userCar{
+        width: 35px;
+    }
+    .obstcaleImage{
+        width: 35px;
+    }
+    #buttonContainer{
+        grid-template-columns: 60px 60px;
+    }
+    .carButtons{
+        height: 60px;
+    }
+}

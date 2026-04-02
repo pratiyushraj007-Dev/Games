@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="startContainer">
+        <p class="startPara">Press Start to Play the game</p>
+        <button id="startButton">Start</button>
+    </div>
+    <audio id="car_audio" src="car_music.mp3"></audio>
+    <div id="scoreContainer">
+        <p id="highestScorePara">Highest Score: <span id="highestScore"></span></p>
+        <p id="scorePara">Score: <span id="score"></span></p>
+    </div>
+    <div id="container">
+        <div id="userCarContainer">
+            <img src="red_car.webp" id="userCar" alt="userCar">
+        </div>
+    </div>
+    <div id="buttonContainer">
+        <button id="ArrowUp" class="carButtons" style="border-right: 2px solid black; border-bottom: 2px solid black;">
+            <!-- <p>UP</p> -->
+        </button>
+        <button id="ArrowRight" class="carButtons " style="border-bottom: 2px solid black;">
+            <!-- <p>RIGHT</p> -->
+        </button>
+        <button id="ArrowLeft" class="carButtons ">
+            <!-- <p>LEFT</p> -->
+        </button>
+        <button id="ArrowDown" class="carButtons " style="border-right: 2px solid black;" >
+            <!-- <p>BUTTOM</p> -->
+        </button>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
